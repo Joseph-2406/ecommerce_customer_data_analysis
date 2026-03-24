@@ -43,11 +43,11 @@ def render_products(df: pd.DataFrame):
         "Order Count":       pivot_orders,
         "Avg Units/Order":   pivot_avg['Avg_Qty_Per_Order'].round(2),
     }).fillna(0)
-    st.dataframe(summary.style.format({
-        "Units Sold":      "{:,.0f}",
-        "Order Count":     "{:,.0f}",
-        "Avg Units/Order": "{:.2f}",
-    }), use_container_width=True)
+        st.dataframe(summary.style.format({
+            "Units Sold":      "{:,.0f}",
+            "Order Count":     "{:,.0f}",
+            "Avg Units/Order": "{:.2f}",
+        }), width="stretch")
 
     st.markdown("---")
 

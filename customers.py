@@ -52,7 +52,7 @@ def render_customers(df: pd.DataFrame):
                 "Orders":          "{:,.0f}",
                 "Avg Order Value": "₹{:,.2f}",
             }),
-            use_container_width=True,
+            width="stretch",
         )
     with col2:
         fig1 = bar_chart(

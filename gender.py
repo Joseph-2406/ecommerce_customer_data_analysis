@@ -45,12 +45,12 @@ def render_gender(df: pd.DataFrame):
         st.markdown("**Avg Spend per Order**")
         st.dataframe(
             pivot_avg.style.format({"Total_Amount": "₹{:,.2f}"}),
-            use_container_width=True,
+            width="stretch",
         )
         st.markdown("**Total Revenue**")
         st.dataframe(
             pivot_total.style.format({"Total_Amount": "₹{:,.2f}"}),
-            use_container_width=True,
+            width="stretch",
         )
 
     with col2:
@@ -88,7 +88,7 @@ def render_gender(df: pd.DataFrame):
     with col4:
         st.dataframe(
             pivot_multi.head(top_n).style.format("₹{:,.2f}"),
-            use_container_width=True,
+            width="stretch",
         )
     with col5:
         fig3 = grouped_bar_chart(

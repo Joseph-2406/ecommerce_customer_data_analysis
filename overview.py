@@ -62,6 +62,6 @@ def render_overview(df: pd.DataFrame):
 
     # ── Raw data preview ───────────────────────────────────────────────────
     with st.expander("🔍 View Raw Data (first 100 rows)"):
-        st.dataframe(df.head(100), use_container_width=True)
+        st.dataframe(df.head(100), width="stretch")
         st.caption(f"Showing 100 of {len(df):,} rows")
 

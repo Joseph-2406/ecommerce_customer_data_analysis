@@ -42,7 +42,7 @@ def render_revenue(df: pd.DataFrame):
         st.dataframe(
             pivot_cat.head(top_n)
             .style.format({"Total_Amount": "₹{:,.2f}"}),
-            use_container_width=True,
+            width="stretch",
         )
     with col2:
         fig1 = bar_chart(
@@ -95,7 +95,7 @@ def render_revenue(df: pd.DataFrame):
     with col3:
         st.dataframe(
             pivot_multi.style.format("₹{:,.2f}"),
-            use_container_width=True,
+            width="stretch",
         )
     with col4:
         fig3 = grouped_bar_chart(
